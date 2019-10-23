@@ -1,2 +1,2 @@
-# DN-Union
-DN Attendance
+# KUDOS-MS-Attendance
+Maple Story Attendance
