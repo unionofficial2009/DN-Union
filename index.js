@@ -35,14 +35,14 @@ let args =  messageArray.slice(1);
    let myattendance = 0;
    
    if (curHr < 12) {
-      greetings = 'Good Morning';
+      greetings = 'Have a nice day!';
    } else if (curHr < 18) {
-      greetings ='Good Afternoon';
+      greetings ='Have a nice day!';
    } else {
-      greetings ='Good Evening';
+      greetings ='Have a nice day!';
    }
    
-   let attendancechannel = message.guild.channels.find(`name`, "maple-story-attendance");
+   let attendancechannel = message.guild.channels.find(`name`, "mabinogi-attendance");
    if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
    
    attendancechannel.fetchMessages({ limit: 100 })
@@ -73,7 +73,7 @@ let args =  messageArray.slice(1);
      if (myattendance > 0){
        
           
-         let romemberRole = message.guild.roles.find("name", "Maple Story Member"); 
+         let romemberRole = message.guild.roles.find("name", "Mabinogi Member"); 
        
         if(message.member.roles.has(romemberRole.id)) {
            message.reply("You already have attendance for today.")  
@@ -86,7 +86,7 @@ let args =  messageArray.slice(1);
      }  else {
        
          
-      let romemberRole = message.guild.roles.find("name", "Maple Story Member");  
+      let romemberRole = message.guild.roles.find("name", "Mabinogi Member");  
       if(message.member.roles.has(romemberRole.id)) {
       
       message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);  
@@ -105,9 +105,9 @@ let args =  messageArray.slice(1);
      .setThumbnail(bicon)
      .addField("Attendance", "Present")
      .setTimestamp()
-     .setFooter("KUDOS Maple Story Attendance",bicon2);
+     .setFooter("KUDOS Mabinogi Attendance",bicon2);
      
-     let attendancechannel = message.guild.channels.find(`name`, "maple-story-attendance");
+     let attendancechannel = message.guild.channels.find(`name`, "mabinogi-attendance");
      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");   
         
      attendancechannel.send(attendanceEmbed);   
