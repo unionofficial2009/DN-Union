@@ -73,7 +73,7 @@ let args =  messageArray.slice(1);
      if (myattendance > 0){
        
           
-         let romemberRole = message.guild.roles.find("name", "AuraKingdom Member"); 
+         let romemberRole = message.guild.roles.find("name", "Aura Kingdom Member"); 
        
         if(message.member.roles.has(romemberRole.id)) {
            message.reply("You already have attendance for today.")  
@@ -86,7 +86,7 @@ let args =  messageArray.slice(1);
      }  else {
        
          
-      let romemberRole = message.guild.roles.find("name", "AuraKingdom Member");  
+      let romemberRole = message.guild.roles.find("name", "Aura Kingdom Member");  
       if(message.member.roles.has(romemberRole.id)) {
       
       message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);  
