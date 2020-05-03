@@ -23,9 +23,9 @@ let args =  messageArray.slice(1);
     
  if(cmd === `${prefix}present`){
    
-   if (message.channel.id != 636585772627263508 && message.author.id != 636586442495098890) {
+   if (message.channel.id != 689816226796666914 && message.author.id != 636586442495098890) {
      message.delete().catch(O_o=>{});
-     return message.reply("Invalid Channel! Please type **%present** here :arrow_right: <#636585772627263508>");
+     return message.reply("Invalid Channel! Please type **%present** here :arrow_right: <#689816226796666914>");
    } 
    
    let today = new Date();
@@ -42,7 +42,7 @@ let args =  messageArray.slice(1);
       greetings ='Have a nice day!';
    }
    
-   let attendancechannel = message.guild.channels.find(`name`, "mabinogi-attendance");
+   let attendancechannel = message.guild.channels.find(`name`, "aura-kingdom-attendance");
    if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");
    
    attendancechannel.fetchMessages({ limit: 100 })
@@ -73,7 +73,7 @@ let args =  messageArray.slice(1);
      if (myattendance > 0){
        
           
-         let romemberRole = message.guild.roles.find("name", "Mabinogi Member"); 
+         let romemberRole = message.guild.roles.find("name", "AuraKingdom Member"); 
        
         if(message.member.roles.has(romemberRole.id)) {
            message.reply("You already have attendance for today.")  
@@ -86,7 +86,7 @@ let args =  messageArray.slice(1);
      }  else {
        
          
-      let romemberRole = message.guild.roles.find("name", "Mabinogi Member");  
+      let romemberRole = message.guild.roles.find("name", "AuraKingdom Member");  
       if(message.member.roles.has(romemberRole.id)) {
       
       message.reply(`${greetings} ${message.member.displayName}  :tada::hugging: !`);  
@@ -105,9 +105,9 @@ let args =  messageArray.slice(1);
      .setThumbnail(bicon)
      .addField("Attendance", "Present")
      .setTimestamp()
-     .setFooter("KUDOS Mabinogi Attendance",bicon2);
+     .setFooter("KUDOS AuraKingdom2 Attendance",bicon2);
      
-     let attendancechannel = message.guild.channels.find(`name`, "mabinogi-attendance");
+     let attendancechannel = message.guild.channels.find(`name`, "aura-kingdom-attendance");
      if (!attendancechannel) return message.channel.send("Couldn't find attendance channel.");   
         
      attendancechannel.send(attendanceEmbed);   
